@@ -118,5 +118,5 @@ A tool for defining and running multi-container Docker applications. It uses a Y
 - `docker system info`: Displays system-wide information about Docker.
 - `docker system prune`: Removes unused data such as stopped containers, dangling images, and networks.
 
-# For more command or explanation on how to use any of them go to ChatGPT 
+# For more command or explanation on how to use any of them go to ChatGPT or Go to NetNinja YT
 ---
