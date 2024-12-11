@@ -44,7 +44,7 @@ A tool for defining and running multi-container Docker applications. It uses a Y
 - `docker run {container_name}`: Runs a Docker container/image.
 - `docker ps`: Shows all active containers.
 - `docker ps -a`: Shows all containers.
-- `docker stop {container_name}`: Stops a container.
+- `docker stop {container_name or container_id}`: Stops a container.
 - `docker image rm {image_name}`: Deletes an image.
 - `docker image rm {image_name} -f`: Deletes an image by force.
 - `docker container rm {container_name}`: Deletes a container.
