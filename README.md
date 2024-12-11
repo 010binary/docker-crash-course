@@ -30,7 +30,7 @@ Docker Hub is a repository similar to GitHub but for Docker. It hosts various im
 
 ### Docker Volume
 
-A feature that maps files or directories in the local environment to those in Docker containers, enabling automatic updates between them.
+A volume is a mechanism Docker provides to store data outside of the container's filesystem. Containers are ephemeral by nature—any data written inside the container is lost once the container is deleted. Volumes solve this issue by providing persistent storage.
 
 ### Docker Compose
 
@@ -38,28 +38,69 @@ A tool for defining and running multi-container Docker applications. It uses a Y
 
 ## Docker Cheatsheet
 
-### Basic Commands
+### **Basic Commands**
 
-- `docker images`: Lists Docker images.
-- `docker images -a`: Shows all containers.
-- `docker run {container_name}`: Runs a Docker container/image.
-- `docker ps`: Shows all active containers.
-- `docker ps -a`: Shows all containers.
-- `docker stop {container_name or container_id}`: Stops a container.
-- `docker image rm {image_name}`: Deletes an image.
-- `docker rmi {image_name}`: Deletes an image.
-- `docker image rm {image_name} -f`: Deletes an image by force.
-- `docker container rm {container_name or container_id}`: Deletes a container.
-- `docker start {container_name or container_id}`: Starts a container in detached mode.
-- `docker system prune -a`: Deletes everything in Docker.
+- **List Docker images**  
+  ```bash
+  docker images
+  ```
 
-### Running Containers
+- **Run a Docker container or image**  
+  ```bash
+  docker run {container_name}
+  ```
 
-- Proper way to run a container with `-p port mapping` `-d detached mode runs in background` and `-v volume mounting`.
-```bash
-  docker run --name {container_name} -p {container_port:local_port} -d -v {path_in_system}:{path_in_container} {image_name}
-```
+- **Show all active containers**  
+  ```bash
+  docker ps
+  ```
 
+- **Show all containers (active and inactive)**  
+  ```bash
+  docker ps -a
+  ```
+
+- **Stop a container**  
+  ```bash
+  docker stop {container_name or container_id}
+  ```
+
+- **Delete a Docker image**  
+  ```bash
+  docker image rm {image_name}
+  ```
+
+- **Delete a Docker image (alternative command)**  
+  ```bash
+  docker rmi {image_name}
+  ```
+
+- **Delete a Docker image by force**  
+  ```bash
+  docker image rm {image_name} -f
+  ```
+
+- **Delete a Docker container**  
+  ```bash
+  docker container rm {container_name or container_id}
+  ```
+
+- **Start a container in detached mode**  
+  ```bash
+  docker start {container_name or container_id}
+  ```
+
+- **Delete everything in Docker (including unused images, containers, networks, etc.)**  
+  ```bash
+  docker system prune -a
+  ```
+
+### **Running Containers**
+
+- **Run a container with port mapping, detached mode, and volume mounting**  
+  ```bash
+  docker run --name {container_name} -p {local_port}:{container_port} -d -v {path_in_system}:{path_in_container} {image_name}
+  ```
 
 ### Docker Build
 
