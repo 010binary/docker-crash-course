@@ -53,7 +53,11 @@ A tool for defining and running multi-container Docker applications. It uses a Y
 
 ### Running Containers
 
-- `docker run --name {container_name} -p {container_port:local_port} -d -v {path_in_system}:{path_in_container} {container_name}`: Proper way to run a container with port mapping and volume mounting.
+- Proper way to run a container with `-p port mapping` `-d detached mode runs in background` and `-v volume mounting`.
+```bash
+  docker run --name {container_name} -p {container_port:local_port} -d -v {path_in_system}:{path_in_container} {container_name}
+```
+
 
 ### Docker Build
 
