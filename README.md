@@ -40,7 +40,8 @@ A tool for defining and running multi-container Docker applications. It uses a Y
 
 ### Basic Commands
 
-- `docker images`: Lists all Docker images.
+- `docker images`: Lists Docker images.
+- `docker images -a`: Shows all containers.
 - `docker run {container_name}`: Runs a Docker container/image.
 - `docker ps`: Shows all active containers.
 - `docker ps -a`: Shows all containers.
@@ -95,7 +96,7 @@ A tool for defining and running multi-container Docker applications. It uses a Y
 
 ### Docker Inspection and Debugging
 
-- `docker inspect {container_name_or_id}`: Displays detailed information about a Docker container.
+- `docker inspect {container_name_or_id or image_id}`: Displays detailed information about a Docker container or image depenying on what you passed to it .
 - `docker logs {container_name_or_id}`: Displays logs from a Docker container.
 - `docker exec -it {container_name_or_id} {command}`: Executes a command inside a running Docker container.
 - `docker diff {container_name_or_id}`: Shows changes made to the filesystem of a Docker container.
