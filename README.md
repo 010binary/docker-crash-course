@@ -47,8 +47,8 @@ A tool for defining and running multi-container Docker applications. It uses a Y
 - `docker stop {container_name or container_id}`: Stops a container.
 - `docker image rm {image_name}`: Deletes an image.
 - `docker image rm {image_name} -f`: Deletes an image by force.
-- `docker container rm {container_name}`: Deletes a container.
-- `docker start {container_name}`: Starts a container in detached mode.
+- `docker container rm {container_name or container_id}`: Deletes a container.
+- `docker start {container_name or container_id}`: Starts a container in detached mode.
 - `docker system prune -a`: Deletes everything in Docker.
 
 ### Running Containers
