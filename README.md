@@ -41,7 +41,7 @@ A tool for defining and running multi-container Docker applications. It uses a Y
 ### Basic Commands
 
 - `docker images`: Lists all Docker images.
-- `docker run {container_name}`: Runs a Docker container.
+- `docker run {container_name}`: Runs a Docker container/image.
 - `docker ps`: Shows all active containers.
 - `docker ps -a`: Shows all containers.
 - `docker stop {container_name}`: Stops a container.
